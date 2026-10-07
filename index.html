@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Weather Dashboard</h1>
+
+    <form id="search-form" novalidate>
+      <label for="city-input">City name</label>
+      <div class="row">
+        <input id="city-input" type="text" placeholder="e.g. Chennai" autocomplete="off" autofocus>
+        <button type="submit" id="search-btn">Get weather</button>
+      </div>
+    </form>
+
+    <p id="message" role="status" aria-live="polite" hidden></p>
+
+    <section id="result" aria-live="polite" hidden>
+      <header>
+        <h2 id="place"></h2>
+        <p id="condition"></p>
+      </header>
+      <p class="temp"><span id="temp"></span><small>°C</small></p>
+      <dl>
+        <div><dt>Feels like</dt><dd id="feels"></dd></div>
+        <div><dt>Humidity</dt><dd id="humidity"></dd></div>
+        <div><dt>Wind</dt><dd id="wind"></dd></div>
+        <div><dt>Pressure</dt><dd id="pressure"></dd></div>
+      </dl>
+      <p class="stamp" id="stamp"></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
